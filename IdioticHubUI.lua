@@ -1157,7 +1157,13 @@ function OrionLib:MakeWindow(WindowConfig)
 
 				return Button
 			end    
-			
+			function ElementFunction:Set(...)
+				for i,v in pairs(...)
+					print(i,v)
+				end
+
+				return Toggle
+			end
 			function ElementFunction:AddToggle(ToggleConfig)
 				ToggleConfig = ToggleConfig or {}
 				ToggleConfig.Name = ToggleConfig.Name or "Toggle"
